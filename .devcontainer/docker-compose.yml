@@ -6,11 +6,9 @@ services:
       dockerfile: Dockerfile
     volumes:
       # .devcontainer ディレクトリのdocker-comopse.yml なので、1つ上のディレクトリをマウントする
-      - ../..:/workspaces:cached
-      - nestjs_devcontainer_node_modules://workspaces/node_modules
-      - nestjs_devcontainer_dist://workspaces/dist
+      - ..:/workspaces:cached
+      - nestjs_devcontainer_node_modules:/workspaces/node_modules
     command: sleep infinity
 
 volumes:
   nestjs_devcontainer_node_modules:
-  nestjs_devcontainer_dist:
